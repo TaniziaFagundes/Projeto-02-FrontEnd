@@ -1,0 +1,291 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box; 
+	font-family: 'Montserrat', sans-serif;
+}
+
+html,body{
+	height: 100%;
+}
+
+.clear{
+	clear: both;
+}
+
+/*ESTILIZAÇÃO DA BARRA SUPERIOR*/
+
+.center{
+	width: 100%;
+	margin:0 auto;
+	max-width: 1280px;
+}
+
+.header{
+	width: 100%;
+	padding: 0 2%;
+	height: 60px;
+	background-color: #212343;
+	/* min-width: 1200px; /*largura minima que pode ter para não ficar espaço em branco nas laterais*/
+}
+
+.header img{
+	margin: 20px;  /*30px de todos os lados*/
+}
+
+/*ESTILIZAÇÃO DO BANNER DE BACKGROUND*/
+
+.container-banner{
+	width: 100%;
+	height: 557px;
+	padding: 0 2%;
+	background-image: url('../imagens/header_bg.png');
+	background-size: cover; /*cobrir toda a area*/
+	background-position: center; /*alinhado no centro*/
+}
+
+.container-banner > .center{
+	height: 100%;  /*para que o form heigth possa herdar a altura*/
+}
+
+/*ESTILIZAÇÃO DA LISTA NO BANNER PRINCIPAL*/
+
+.banner-lista{
+	padding: 30px 2%;
+	margin-top: 100px;
+	float: left;
+	width: 50%;
+	height: 270px;
+	background-color: rgb(33,35,67,0.7);
+}
+
+.banner-lista ul{
+	list-style-position: inside; /*para a lista ficar dentro da class*/
+}
+
+.banner-lista ul li{
+	color: white;
+	margin-top: 18px;
+	font-size: 20px;
+}
+
+
+/*ESTILIZAÇÃO DO FORMULARIO*/
+
+.form{
+	padding: 10px;
+	width: 410px;
+	height: calc(100% + 20px); /*sempre herda da div anterior*/
+	float: right; 
+	background-color: white;
+	border : 6px solid rgba(120,120,120,0.6);
+	top: -15px; /*sobe 15 px na div acima da class container-banner*/
+	position: relative;
+	background-clip:padding-box; /*o conteudo do form começa so depois da borda, deixando a borda com efeito transparente usando o rgba*/
+}
+
+.form h2{
+	padding:10px 55px;
+	font-style: italic;
+	color: #555F;
+}
+
+.input-container{
+	margin-top: 20px;
+	margin-left:  20px;
+}
+
+.input-container span{
+	display: inline-block;
+	font-size: 17px;
+}
+
+.form p{
+	margin:40px 20px;
+}
+
+.input-container input[type='text']{
+	width: 344px;
+	height: 55px;
+	margin-top: 8px;
+	border-color: 1px solid #ccc;
+}
+
+.input-submit-container{
+	text-align: center;  /*necessario colocar display:inline block na classe ao qual quer centralizar*/
+}
+
+input[type='submit']{
+	display: inline-block;
+	padding: 15px 80px;
+	margin-bottom: 15px;
+	background-color: #363A6D;	
+	color:white;
+	font-size:20px;
+	font-style: 'Montserrat',sans-serif;
+	cursor:pointer;
+	/*INSERIR EFEITO NA BORDA DE BAIXO*/
+	border-top:0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 5px solid #4A5097;
+}
+
+input[type='submit']:hover{
+	background-color: #4A5097;
+	
+}
+
+/*ESTILIZAÇÃO CONTAINER_2*/
+
+.container-2{
+	padding: 40px 2%;
+	background-color: rgba(120,120,120,0.3);
+	text-align: center;
+}
+
+
+.container-2 h2, .section-1 h2{
+	font-style: italic;
+	color: #555F;
+}
+
+.container-2 p{
+	width: 80%;
+	margin:15px 0;
+	display: inline-block;
+	text-align: justify;
+}
+
+/*ESTILIZAÇÃO DA IMAGEM ARROW, CLASS ARROW*/
+
+.arrow{
+	width: 40px;
+	height:40px;
+	left: 50%;
+	margin-left: -20px; /*para centralizar com base no container em que ele está*/
+	background-image: url(../imagens/arrow.png);
+	background-size: 100% 100%; /*para a imagem não ficar cortada*/
+	position: relative;
+	top: 60px;
+}
+
+/*ESTILIZAÇÃO DA SECTION-1*/
+
+.section-1{
+	padding: 90px 2%;
+	text-align: center;
+}
+
+.container.section{
+	margin-top: 40px;
+}
+
+.sub-section{
+	float:left;
+	width: 33.33%;
+	padding: 30px;
+}
+
+.sub-section p{
+	padding: 10px 25px;
+	text-align: justify;
+}
+
+.sub-section h2{
+	margin-top:15px;
+}
+
+.sub-section img{
+	width: 70px;
+	margin-top:25px;
+}
+
+/*ESTILICAÇÃO RODAPÉ*/
+
+.footer{
+	border-top:4px solid #888888;
+	padding: 30px 0;
+	text-align: center;
+}
+
+@media screen and (max-width:1024px){
+	.header{
+		height: auto;
+		width: 100%;
+		padding: 15px 0;
+		text-align: center;
+	}
+
+	.header img{
+		margin: 0;
+	}
+
+	.container-banner{
+		width: 100%;
+		padding: 40px 2%;
+		height: auto;
+		text-align: center;
+	}
+
+	.form{
+		padding: 10px;
+		width: 60%;
+		max-width: 400px;
+		height: 100% ;
+		float: right;
+		top: 0;
+	}
+
+	.banner-lista{
+		padding:30px 40px;
+		width: 40%;
+		float: left;
+		display: inline-block;
+		max-width: 500px;
+		height: auto;
+		text-align: left;
+
+	}
+
+	.input-container{
+		margin-left:  8px;
+	}
+
+	.input-container input[type='text']{
+		width: 100%;
+		height: 55px;
+
+	}
+
+	input[type='submit']{
+		max-width: 280px;
+		height: 56px;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.banner-lista{
+		float: none;
+		display:inline-block;
+		margin-top: 0;
+		width: 100%;
+	}
+
+	.form{
+		float: none;
+		display: inline-block;
+		width: 100%;
+		margin-top:30px;
+	}
+
+	.sub-section{
+		float:none;
+		width: 100%;
+		padding: 30px 0;
+		display: inline-block;
+		max-width: 600px
+	}
+}
+
